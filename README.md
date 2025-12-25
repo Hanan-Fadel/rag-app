@@ -1,3 +1,4 @@
+# Retrieval Augmented Generation (RAG)
 # Miniconda Installation
 
 Install a lightweight Conda distribution so you can manage Python versions and dependencies consistently across macOS, Linux, and Windows. Each platform section below references the official installers hosted at https://repo.anaconda.com/miniconda/.
@@ -112,11 +113,11 @@ conda --version
 
 1. Create the project environment with Python 3.8 (or later if the project supports it):
    ```bash
-   conda create -n rag-app python=3.8
+   conda create -n mini-rag python=3.8
    ```
 2. Activate the environment:
    ```bash
-   conda activate rag-app
+   conda activate mini-rag
    ```
 3. Install the Python dependencies:
    ```bash
@@ -131,8 +132,8 @@ conda --version
    ```bash
    export PS1="\[\033[01;32m\]\u@\h:\w\n\[\033[00m\]\$ "
    ```
-## install the required packages
-pip install -r requirements.txt 
+## Run the FastAPI server:
 
-## setup the enviromnet variables 
-cp .env.example .env
+ ```bash
+uvicorn main:app --reload --host 0.0.0.0 --port 5000
+   ```
