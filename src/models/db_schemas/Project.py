@@ -15,3 +15,15 @@ class Project(BaseModel):
 
     class Config:
         arbitrary_types_allowed = True  #allow to use ObjectId in the schema as a field type
+
+    @classmethod #static method
+    def get_indexes(cls):
+        return [
+            {
+                "key":[
+                    ("project_id", 1)
+                ],
+                "name": "project_id_index_1",
+                "unique": True, #unique index on the project_id field
+            }
+        ]
