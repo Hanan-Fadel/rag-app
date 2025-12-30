@@ -26,6 +26,11 @@ class Settings(BaseSettings):
     GENERATION_DEFAULT_MAX_TOKEN: int = 200
     GENERATION_DEFAULT_TEMPERATURE: float
 
+    ## VectorDB Config
+    VECTOR_DB_BACKEND: str 
+    VECTOR_DB_PATH: str
+    VECTOR_DB_DISTANCE_METHOD: str = None
+
     
     model_config = SettingsConfigDict(
         env_file=".env"
