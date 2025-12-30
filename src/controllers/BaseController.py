@@ -11,6 +11,6 @@ class BaseController:
             self.base_dir ,
               "assets/files" 
         )
-    def generate_random_string(self, length: int=12):
+    def generate_random_string(self, length: int = 12):
         return ''.join(random.choices(string.ascii_lowercase + string.digits, k=length)) #returns random string of digits and chars of length = 12
 
